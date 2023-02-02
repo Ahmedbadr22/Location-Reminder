@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_nav_graph"
+    app:startDestination="@id/mainAuthFragment">
+
+    <fragment
+        android:id="@+id/mainAuthFragment"
+        android:name="com.example.location.reminder.authentication.ui.fragments.MainAuthFragment"
+        android:label="MainAuthFragment"
+        tools:layout="@layout/fragment_main_auth">
+        <action
+            android:id="@+id/action_mainAuthFragment_to_loginMethodFragment"
+            app:destination="@id/loginMethodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginMethodFragment"
+        android:name="com.example.location.reminder.authentication.ui.fragments.LoginMethodFragment"
+        android:label="LoginMethodFragment"
+        tools:layout="@layout/fragment_login_method">
+        <action
+            android:id="@+id/action_loginMethodFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.location.reminder.authentication.ui.fragments.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.location.reminder.authentication.ui.fragments.RegistrationFragment"
+        android:label="RegistrationFragment"
+        tools:layout="@layout/fragment_registration"/>
+</navigation>
